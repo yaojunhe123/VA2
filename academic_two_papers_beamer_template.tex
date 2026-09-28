@@ -91,64 +91,72 @@
 \section{Literature Review}
 
 % Review slide 1 of 6
-\begin{frame}{Research Background and Scope}
+\begin{frame}{Motivation and Scope}
   \begin{itemize}
-    \item \fillin{Field context}
-    \item \fillin{Scope and boundaries of the review}
-    \item \fillin{Core question addressed by the review}
+    \item Larger datasets and longer-running analytics delay the first usable result and interrupt visual exploration.
+    \item Progressive visualization shows meaningful partial views while computation continues; the views improve over time.
+    \item Ulmer et al. focus on visual and interactive systems, excluding work that only accelerates algorithms without progressive visual output.
   \end{itemize}
+  \vfill
+  {\scriptsize\textcolor{gray}{Source: Ulmer et al. (2024).}}
 \end{frame}
 
 % Review slide 2 of 6
-\begin{frame}{Key Concepts and Theoretical Development}
+\begin{frame}{Requirements for Progressive Visualization}
   \begin{itemize}
-    \item \fillin{Key concepts and definitions}
-    \item \fillin{Main theoretical perspectives}
-    \item \fillin{Relationships among concepts or theories}
+    \item Computation proceeds in bounded passes, each returning a meaningful partial result.
+    \item Partial results should communicate quality or error and give an estimate of completion.
+    \item Users can interact before completion; steering can direct further computation toward relevant regions.
+    \item Data chunking addresses large inputs; process chunking exposes progress in slow algorithms.
   \end{itemize}
+  \vfill
+  {\scriptsize\textcolor{gray}{Sources: Ulmer et al. (2024); Pezzotti et al. (2017).}}
 \end{frame}
 
 % Review slide 3 of 6
-\begin{frame}{Main Research Approaches}
+\begin{frame}{A Taxonomy of Progressive Visualizations}
   \begin{itemize}
-    \item \fillin{Research approach A and its focus}
-    \item \fillin{Research approach B and its focus}
-    \item \fillin{Connections and differences between approaches}
+    \item \textbf{Visualization type:} temporal, geo-spatial, hierarchical, network, multidimensional, or field.
+    \item \textbf{Processing:} data chunking, process chunking, or custom chunking.
+    \item \textbf{Data domain:} known end or unknown end.
+    \item \textbf{Visual update:} extend the current view or overwrite it with a new state.
   \end{itemize}
+  \vfill
+  {\scriptsize\textcolor{gray}{Source: Ulmer et al. (2024).}}
 \end{frame}
 
 % Review slide 4 of 6
-\begin{frame}{Comparison of Representative Studies}
-  \small
-  \begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{0.19\textwidth}XXX}
-    \toprule
-    Study & Question / Theory & Data / Method & Main Finding \\
-    \midrule
-    \fillin{Study A} & \fillin{Add details} & \fillin{Add details} & \fillin{Add details} \\
-    \fillin{Study B} & \fillin{Add details} & \fillin{Add details} & \fillin{Add details} \\
-    \fillin{Study C} & \fillin{Add details} & \fillin{Add details} & \fillin{Add details} \\
-    \bottomrule
-  \end{tabularx}
+\begin{frame}{Progressive Dimensionality Reduction}
+  \begin{itemize}
+    \item t-SNE builds an embedding through iterative optimization, but it must first compute high-dimensional similarities.
+    \item Barnes-Hut t-SNE reduces optimization cost, yet initialization can still delay the first interpretable embedding.
+    \item Q-SNE approximated neighbors for sparse document data; A-tSNE extends approximate similarities to dense high-dimensional data.
+  \end{itemize}
+  \vfill
+  {\scriptsize\textcolor{gray}{Source: Pezzotti et al. (2017), Related Work.}}
 \end{frame}
 
 % Review slide 5 of 6
-\begin{frame}{Research Progress and Open Debates}
+\begin{frame}{Field Trends and Open Challenges}
   \begin{itemize}
-    \item \fillin{Established findings or areas of consensus}
-    \item \fillin{Open debates or inconsistent findings}
-    \item \fillin{Possible theoretical, data, or methodological sources of disagreement}
+    \item The survey classifies 48 papers from 1999 to 2023; 33 of 48 use multidimensional visualization.
+    \item Steering appears in 35 studies, uncertainty in 20, and real-time processing in 10.
+    \item Open challenges include visual stability as estimates change, uncertainty communication, and evaluation beyond runtime.
   \end{itemize}
+  \vfill
+  {\scriptsize\textcolor{gray}{Source: Ulmer et al. (2024), study set and discussion.}}
 \end{frame}
 
 % Review slide 6 of 6
-\begin{frame}{Research Gap and Positioning of the Two Papers}
+\begin{frame}{Synthesis and Paper Positioning}
   \begin{itemize}
-    \item \fillin{Question that prior work has not resolved}
-    \item \fillin{Focus of Paper 1}
-    \item \fillin{Focus of Paper 2 and its connection to Paper 1}
+    \item A-tSNE addresses an algorithm-level bottleneck: delayed initialization in high-dimensional t-SNE.
+    \item The 2024 survey offers a field-level taxonomy and reviews evaluation methods and research gaps.
+    \item \textbf{Synthesis:} progressive methods must make partial results timely, interpretable, steerable, and stable as they improve.
   \end{itemize}
+  \vfill
+  {\scriptsize\textcolor{gray}{Sources: Pezzotti et al. (2017); Ulmer et al. (2024).}}
 \end{frame}
-
 \section{Paper 1}
 
 % Slides 9-18: Paper 1 (10 slides)
@@ -304,10 +312,10 @@
 \begin{frame}{References}
   \small
   \begin{thebibliography}{99}
-    \bibitem{ref1} \fillin{Author. Title. Journal or Publisher, Year.}
-    \bibitem{ref2} \fillin{Author. Title. Journal or Publisher, Year.}
-    \bibitem{ref3} \fillin{Author. Title. Journal or Publisher, Year.}
-  \end{thebibliography}
+    \bibitem{pezzotti2017} N. Pezzotti et al., Approximated and User Steerable t-SNE for Progressive Visual Analytics, \textit{IEEE Transactions on Visualization and Computer Graphics}, 23(7), 1739--1752, 2017. doi:10.1109/TVCG.2016.2570755.
+
+    \bibitem{ulmer2024} A. Ulmer et al., A Survey on Progressive Visualization, \textit{IEEE Transactions on Visualization and Computer Graphics}, 30(9), 6447--6467, 2024. doi:10.1109/TVCG.2023.3346641.
+\end{thebibliography}
 \end{frame}
 
 % Slide 28: Questions
@@ -321,6 +329,10 @@
 \end{frame}
 
 \end{document}
+
+
+
+
 
 
 
