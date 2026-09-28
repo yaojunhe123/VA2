@@ -93,7 +93,7 @@
       \begin{itemize}
         \setlength{\itemsep}{0.8em}
         \item Renders in one pass.
-        \item A data change or user interaction triggers a full rendering.
+        \item Each change in the data, whether caused by interaction or new data, triggers a full rendering.
       \end{itemize}
     \end{column}
     \begin{column}{0.47\textwidth}
@@ -102,16 +102,16 @@
       \small
       \begin{itemize}
         \setlength{\itemsep}{0.65em}
-        \item Renders in a sequence of passes, progressively improving toward completion.
-        \item Each pass stays within a requested latency and produces a meaningful partial result.
-        \item Each partial result includes an error or quality measure and an estimate of completion.
-        \item Allows interaction at any time, adapts when possible, and can support steering.
+        \item Rendering uses a series of passes that improve the result until completion.
+        \item Each pass is limited to a requested latency and renders a meaningful partial result.
+        \item Each partial result has a meaningful error or quality measure and an estimate of completion, such as a progress bar.
+        \item Users can interact at any time; the visualization adapts as much as possible and can implement steering when needed.
       \end{itemize}
     \end{column}
   \end{columns}
   \vfill
   \centering
-  {\scriptsize\textcolor{gray}{Definition adapted from Ulmer et al. (2024), Sec.~2, ``Formal Definition,'' PDF p.~2.}}
+  {\scriptsize\textcolor{gray}{Definition adapted from Ulmer et al., ``A Survey on Progressive Visualization'' (2024).}}
 \end{frame}
 
 \section{Literature Review}
