@@ -140,15 +140,28 @@
 \end{frame}
 
 % Review slide 2 of 6
-\begin{frame}{Requirements for Progressive Visualization}
-  \begin{itemize}
-    \item Computation proceeds in bounded passes, each returning a meaningful partial result.
-    \item Partial results should communicate quality or error and give an estimate of completion.
-    \item Users can interact before completion; steering can direct further computation toward relevant regions.
-    \item Data chunking addresses large inputs; process chunking exposes progress in slow algorithms.
-  \end{itemize}
-  \vfill
-  {\scriptsize\textcolor{gray}{Sources: Ulmer et al. (2024); Pezzotti et al. (2017).}}
+\begin{frame}{Three Ways to Produce Progressive Results}
+  \centering
+  \includegraphics[width=0.78\textwidth]{assets/ulmer-taxonomy-fig1.png}\\[-0.1em]
+  {\tiny\textcolor{gray}{Ulmer et al. (2024), ``A Survey on Progressive Visualization.''}}
+  \vspace{0.35em}
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{0.32\textwidth}
+      {\small\bfseries\color{ConferenceBlue}Data chunking\par}
+      \vspace{0.2em}
+      {\footnotesize Add data chunks successively. $R_i$ reflects the data processed so far.}
+    \end{column}
+    \begin{column}{0.32\textwidth}
+      {\small\bfseries\color{ConferenceBlue}Process chunking\par}
+      \vspace{0.2em}
+      {\footnotesize Iterate over loaded data. $R_i$ is the algorithm's current output.}
+    \end{column}
+    \begin{column}{0.32\textwidth}
+      {\small\bfseries\color{ConferenceBlue}Custom chunking\par}
+      \vspace{0.2em}
+      {\footnotesize Use a tailored or hybrid schedule beyond the two basic modes.}
+    \end{column}
+  \end{columns}
 \end{frame}
 
 % Review slide 3 of 6
