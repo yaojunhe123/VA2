@@ -83,9 +83,36 @@
   \titlepage
 \end{frame}
 
-% Slide 2: Outline
-\begin{frame}{Outline}
-  \tableofcontents
+% Slide 2: Definition of progressive visualization
+\begin{frame}{Progressive vs. Non-progressive Visualization}
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{0.46\textwidth}
+      \begin{block}{Non-progressive (``eager'') visualization}
+        \small
+        \begin{itemize}
+          \setlength{\itemsep}{0.65em}
+          \item Renders in one pass.
+          \item A data change or user interaction triggers a full rendering.
+        \end{itemize}
+      \end{block}
+    \end{column}
+    \begin{column}{0.52\textwidth}
+      \begin{block}{Progressive visualization}
+        \small
+        \begin{itemize}
+          \setlength{\itemsep}{0.55em}
+          \item Renders in a sequence of passes, progressively improving toward completion.
+          \item Each pass stays within a requested latency and produces a meaningful partial result.
+          \item Each partial result includes an error or quality measure and an estimate of completion.
+          \item Allows interaction at any time, adapts when possible, and can support steering.
+        \end{itemize}
+      \end{block}
+    \end{column}
+  \end{columns}
+  \vfill
+  \centering
+  \small\textbf{Meaningful partial results are part of the definition.}\\[0.35em]
+  {\scriptsize\textcolor{gray}{Definition adapted from Ulmer et al. (2024), Sec.~2, ``Formal Definition,'' PDF p.~2.}}
 \end{frame}
 
 \section{Literature Review}
