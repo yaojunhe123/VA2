@@ -1,0 +1,326 @@
+\documentclass[aspectratio=169]{beamer}
+
+% Blue-violet Beamer style inspired by the supplied reference
+\usetheme{Madrid}
+\usecolortheme{dolphin}
+\definecolor{ConferenceBlue}{RGB}{52,54,183}
+\definecolor{ConferenceBlueDark}{RGB}{42,44,155}
+\setbeamercolor{background canvas}{bg=white}
+\setbeamercolor{structure}{fg=ConferenceBlue}
+\setbeamercolor{title}{fg=white,bg=ConferenceBlue}
+\setbeamercolor{subtitle}{fg=white}
+\setbeamercolor{frametitle}{fg=white,bg=ConferenceBlue}
+\setbeamercolor{author in head/foot}{fg=white,bg=ConferenceBlue}
+\setbeamercolor{title in head/foot}{fg=white,bg=ConferenceBlueDark}
+\setbeamercolor{date in head/foot}{fg=white,bg=ConferenceBlue}
+\setbeamercolor{page number in head/foot}{fg=white,bg=ConferenceBlueDark}
+\setbeamercolor{section in toc}{fg=ConferenceBlue}
+\setbeamerfont{title}{size=\LARGE}
+\setbeamerfont{subtitle}{size=\large}
+\setbeamerfont{author in head/foot}{size=\scriptsize}
+\setbeamerfont{title in head/foot}{size=\scriptsize}
+\setbeamerfont{date in head/foot}{size=\scriptsize}
+\setbeamerfont{page number in head/foot}{size=\scriptsize}
+\setbeamertemplate{footline}{%
+  \leavevmode%
+  \hbox{%
+    \begin{beamercolorbox}[wd=.27\paperwidth,ht=2.8ex,dp=1.1ex,leftskip=.8em]{author in head/foot}%
+      \usebeamerfont{author in head/foot}\insertshortauthor
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}[wd=.36\paperwidth,ht=2.8ex,dp=1.1ex,center]{title in head/foot}%
+      \usebeamerfont{title in head/foot}\insertshorttitle
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}[wd=.25\paperwidth,ht=2.8ex,dp=1.1ex,center]{date in head/foot}%
+      \usebeamerfont{date in head/foot}\insertshortdate
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}[wd=.12\paperwidth,ht=2.8ex,dp=1.1ex,center]{page number in head/foot}%
+      \usebeamerfont{page number in head/foot}\insertframenumber{} / \inserttotalframenumber
+    \end{beamercolorbox}%
+  }%
+}
+\setbeamertemplate{caption}[numbered]
+\setbeamertemplate{bibliography item}[text]
+
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{amsmath}
+
+% Replace each gray placeholder with the corresponding paper content
+\newcommand{\fillin}[1]{\textcolor{gray}{\textit{[#1]}}}
+
+% Screenshot-style title page with a rounded blue title banner
+\setbeamertemplate{title page}{%
+  \begin{centering}
+    \vspace*{0.35cm}
+    \begin{beamercolorbox}[wd=.96\paperwidth,sep=1.2em,center,rounded=true,shadow=true]{title}
+      {\usebeamerfont{title}\inserttitle\par}
+      \vspace{0.3em}
+      {\usebeamerfont{subtitle}\insertsubtitle\par}
+    \end{beamercolorbox}
+    \vspace{1.0cm}
+    {\usebeamerfont{author}\insertauthor\par}
+    \vspace{0.55cm}
+    {\usebeamerfont{institute}\insertinstitute\par}
+    \vfill
+    {\usebeamerfont{date}\insertdate\par}
+  \end{centering}
+}
+
+% ===== Presentation details =====
+\title[Research Talk]{[Academic Presentation Title]}
+\subtitle{[Presentation Subtitle]}
+\author[Presenter, Co-author]{[Presenter Name]\inst{1}\hspace{1em}[Co-author Name]\inst{2}}
+\institute[Institution]{%
+  \inst{1}[Department / Institution]\\
+  \inst{2}[Department / Institution]
+}
+\date[Conference, Month Year]{[Conference Name, Month Year]}
+\begin{document}
+
+% Slide 1: Title
+\begin{frame}
+  \titlepage
+\end{frame}
+
+% Slide 2: Outline
+\begin{frame}{Outline}
+  \tableofcontents
+\end{frame}
+
+\section{Literature Review}
+
+% Review slide 1 of 6
+\begin{frame}{Research Background and Scope}
+  \begin{itemize}
+    \item \fillin{Field context}
+    \item \fillin{Scope and boundaries of the review}
+    \item \fillin{Core question addressed by the review}
+  \end{itemize}
+\end{frame}
+
+% Review slide 2 of 6
+\begin{frame}{Key Concepts and Theoretical Development}
+  \begin{itemize}
+    \item \fillin{Key concepts and definitions}
+    \item \fillin{Main theoretical perspectives}
+    \item \fillin{Relationships among concepts or theories}
+  \end{itemize}
+\end{frame}
+
+% Review slide 3 of 6
+\begin{frame}{Main Research Approaches}
+  \begin{itemize}
+    \item \fillin{Research approach A and its focus}
+    \item \fillin{Research approach B and its focus}
+    \item \fillin{Connections and differences between approaches}
+  \end{itemize}
+\end{frame}
+
+% Review slide 4 of 6
+\begin{frame}{Comparison of Representative Studies}
+  \small
+  \begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{0.19\textwidth}XXX}
+    \toprule
+    Study & Question / Theory & Data / Method & Main Finding \\
+    \midrule
+    \fillin{Study A} & \fillin{Add details} & \fillin{Add details} & \fillin{Add details} \\
+    \fillin{Study B} & \fillin{Add details} & \fillin{Add details} & \fillin{Add details} \\
+    \fillin{Study C} & \fillin{Add details} & \fillin{Add details} & \fillin{Add details} \\
+    \bottomrule
+  \end{tabularx}
+\end{frame}
+
+% Review slide 5 of 6
+\begin{frame}{Research Progress and Open Debates}
+  \begin{itemize}
+    \item \fillin{Established findings or areas of consensus}
+    \item \fillin{Open debates or inconsistent findings}
+    \item \fillin{Possible theoretical, data, or methodological sources of disagreement}
+  \end{itemize}
+\end{frame}
+
+% Review slide 6 of 6
+\begin{frame}{Research Gap and Positioning of the Two Papers}
+  \begin{itemize}
+    \item \fillin{Question that prior work has not resolved}
+    \item \fillin{Focus of Paper 1}
+    \item \fillin{Focus of Paper 2 and its connection to Paper 1}
+  \end{itemize}
+\end{frame}
+
+\section{Paper 1}
+
+% Slides 9-18: Paper 1 (10 slides)
+\begin{frame}{Paper 1: Overview}
+  \begin{itemize}
+    \item \fillin{Title, authors, and publication details}
+    \item \fillin{Research subject and context}
+    \item \fillin{Core question addressed in this paper}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Paper 1: Motivation}
+  \begin{itemize}
+    \item \fillin{Why the research question matters}
+    \item \fillin{Limitations of existing explanations}
+    \item \fillin{How the paper approaches the question}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Paper 1: Research Questions and Hypotheses}
+  \begin{itemize}
+    \item \fillin{Research question}
+    \item \fillin{Hypothesis or proposition 1}
+    \item \fillin{Hypothesis or proposition 2, if applicable}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Paper 1: Conceptual Framework}
+  \begin{itemize}
+    \item \fillin{Key concepts or variables}
+    \item \fillin{Theoretical relationships and proposed mechanisms}
+    \item \fillin{Insert the paper's central framework figure here}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Paper 1: Data and Research Subjects}
+  \begin{itemize}
+    \item \fillin{Data or material sources and time period}
+    \item \fillin{Sample composition or case selection}
+    \item \fillin{Data processing and ethics, if applicable}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Paper 1: Research Methods}
+  \begin{itemize}
+    \item \fillin{Research design and analytical method}
+    \item \fillin{Model, experiment, or analysis workflow}
+    \item \fillin{Key identification assumptions or derivation conditions}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Paper 1: Results Overview}
+  \begin{itemize}
+    \item \fillin{Main result 1}
+    \item \fillin{Main result 2}
+    \item \fillin{How the results address the hypotheses or propositions}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Paper 1: Main Evidence}
+  \begin{itemize}
+    \item \fillin{Insert the key figure, table, or theorem}
+    \item \fillin{Key estimate, proof, or observation}
+    \item \fillin{Conclusion supported by this evidence}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Paper 1: Mechanisms and Additional Analyses}
+  \begin{itemize}
+    \item \fillin{Mechanism analysis or theoretical explanation}
+    \item \fillin{Robustness, sensitivity, or alternative explanation checks}
+    \item \fillin{Boundary conditions for the results}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Paper 1: Summary}
+  \begin{itemize}
+    \item \fillin{Main conclusion}
+    \item \fillin{Contribution and limitation}
+    \item \fillin{Connection to Paper 2}
+  \end{itemize}
+\end{frame}
+
+\section{Paper 2}
+
+% Slides 19-26: Paper 2 (8 slides)
+\begin{frame}{Paper 2: Overview}
+  \begin{itemize}
+    \item \fillin{Title, authors, and publication details}
+    \item \fillin{Research subject and context}
+    \item \fillin{Core question addressed in this paper}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Paper 2: Research Question and Contribution}
+  \begin{itemize}
+    \item \fillin{Research question}
+    \item \fillin{What this paper adds to related work}
+    \item \fillin{Relationship to or distinction from Paper 1}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Paper 2: Framework and Hypotheses}
+  \begin{itemize}
+    \item \fillin{Theoretical basis or conceptual framework}
+    \item \fillin{Hypotheses or propositions}
+    \item \fillin{Proposed mechanism or reasoning}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Paper 2: Data and Research Design}
+  \begin{itemize}
+    \item \fillin{Data or material sources and sample}
+    \item \fillin{Research design and key variables or concepts}
+    \item \fillin{Why the design fits the research question}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Paper 2: Methods and Analysis Strategy}
+  \begin{itemize}
+    \item \fillin{Model, experiment, comparison, or proof method}
+    \item \fillin{Identification strategy or analytical steps}
+    \item \fillin{Key assumptions and how they are assessed}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Paper 2: Main Results}
+  \begin{itemize}
+    \item \fillin{Main result 1 and supporting evidence}
+    \item \fillin{Main result 2 and supporting evidence}
+    \item \fillin{How the results answer the research question}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Paper 2: Mechanisms and Robustness}
+  \begin{itemize}
+    \item \fillin{Mechanisms, heterogeneity, or boundary conditions}
+    \item \fillin{Robustness or sensitivity analyses}
+    \item \fillin{Alternative explanations and additional evidence}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Paper 2: Summary and Overall Conclusions}
+  \begin{itemize}
+    \item \fillin{Main conclusion of Paper 2}
+    \item \fillin{Shared findings and differences across the two papers}
+    \item \fillin{Overall answer to the research topic}
+  \end{itemize}
+\end{frame}
+
+% Slide 27: References
+\section{References}
+\begin{frame}{References}
+  \small
+  \begin{thebibliography}{99}
+    \bibitem{ref1} \fillin{Author. Title. Journal or Publisher, Year.}
+    \bibitem{ref2} \fillin{Author. Title. Journal or Publisher, Year.}
+    \bibitem{ref3} \fillin{Author. Title. Journal or Publisher, Year.}
+  \end{thebibliography}
+\end{frame}
+
+% Slide 28: Questions
+\begin{frame}
+  \centering
+  \vfill
+  {\LARGE \fillin{Thank You}}\\[1em]
+  {\large \fillin{Questions and Discussion}}\\[2em]
+  \fillin{Presenter email, optional}
+  \vfill
+\end{frame}
+
+\end{document}
+
+
+
