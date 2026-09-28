@@ -148,20 +148,37 @@
   \begin{columns}[T,onlytextwidth]
     \begin{column}{0.32\textwidth}
       {\small\bfseries\color{ConferenceBlue}Data chunking\par}
-      \vspace{0.2em}
-      {\footnotesize Add data chunks successively. $R_i$ reflects the data processed so far.}
+      {\scriptsize\[
+        \begin{gathered}
+          D_i=\bigcup_{k=1}^{i}d_k\\[-0.15em]
+          R_i=F_p(P,D_i,q,R_{i-1})
+        \end{gathered}
+      \]}
+      {\footnotesize $R_i$ covers the data received so far.}
     \end{column}
     \begin{column}{0.32\textwidth}
       {\small\bfseries\color{ConferenceBlue}Process chunking\par}
-      \vspace{0.2em}
-      {\footnotesize Iterate over loaded data. $R_i$ is the algorithm's current output.}
+      {\scriptsize\[
+        \begin{gathered}
+          D_i=D\\[-0.15em]
+          R_i=F_p(P,D,q,R_{i-1})
+        \end{gathered}
+      \]}
+      {\footnotesize $R_i$ is the current algorithm output on the full data.}
     \end{column}
     \begin{column}{0.32\textwidth}
       {\small\bfseries\color{ConferenceBlue}Custom chunking\par}
-      \vspace{0.2em}
-      {\footnotesize Use a tailored or hybrid schedule beyond the two basic modes.}
+      {\scriptsize\[
+        \begin{gathered}
+          D_i=\pi_i(P,D,R_{i-1})\\[-0.15em]
+          R_i=F_p(P,D_i,q,R_{i-1})
+        \end{gathered}
+      \]}
+      {\footnotesize $\pi_i$ is a task-specific or hybrid scheduling rule.}
     \end{column}
   \end{columns}
+  \vfill
+  {\scriptsize\textcolor{gray}{Custom-chunking formula is schematic. The survey gives no universal equation.}}
 \end{frame}
 
 % Review slide 3 of 6
