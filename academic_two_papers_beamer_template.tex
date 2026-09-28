@@ -118,30 +118,27 @@
 
 % Review slide 1 of 6
 \begin{frame}{Progressive Computation}
+  \footnotesize
+  \textbf{Ideal function:} $f(P)\mapsto r$. Here $P$ denotes parameters and $r$ the ideal output. Runtime and memory are omitted.\par\vspace{0.15em}
+  \textbf{Actual computation:} $F(P,D)\xrightarrow{t,m}R$. Here $D$ is input data, $R$ the output, and $t,m$ time and memory.\par\vspace{0.15em}
+  \textbf{Progressive computation:} $F_p$ returns partial result $R_i$ at pass $i$. $D_i$ is that pass's input, $q$ the requested interval, and $t_i,m_i$ its time and memory.\par\vspace{-0.1em}
   \centering
-  \small
+  \scriptsize
   \[
-    f(P)\mapsto r,\qquad F(P,D)\xrightarrow{t,m}R
+    \begin{aligned}
+      F_p(P,D_1,q,\emptyset)&\xrightarrow{t_1,m_1}R_1,\quad\ldots,\\
+      F_p(P,D_z,q,R_{z-1})&\xrightarrow{t_z,m_z}R_z
+    \end{aligned}
+    \qquad t_i\leq q,\quad R_i\to R\;\text{or stop at a termination criterion.}
   \]
-  \vspace{-0.65em}
-  \[
-    F_p(P,D_1,q,\emptyset)\xrightarrow{t_1,m_1}R_1
-    \quad\cdots\quad
-    F_p(P,D_z,q,R_{z-1})\xrightarrow{t_z,m_z}R_z
-  \]
-  \vspace{-0.65em}
-  \[
-    t_i\leq q,\qquad \lim_{j\to\infty}R_j=R
-    \quad\text{or a termination criterion is reached.}
-  \]
-  \vspace{-0.4em}
-  {\scriptsize $q$: interval between partial results;\quad $t_i,m_i$: time and memory;\quad $R_i$: partial result.}
-  \vspace{0.2em}
-
-  \includegraphics[width=0.72\textwidth]{assets/pezzotti-fig8-panels-only.png}\\[-0.15em]
-  \vspace{-0.20cm}
-  {\tiny\textcolor{gray}{Formula: Fekete \& Primet (2016), ``Progressive Analytics: A Computation Paradigm for Exploratory Data Analysis,'' as cited in Ulmer et al. (2024).\\
-  Figure: Pezzotti et al. (2017), ``Approximated and User Steerable tSNE for Progressive Visual Analytics.''}}
+  \vspace{-0.2em}
+  {\centering\tiny\textcolor{gray}{Formula adapted from Fekete \& Primet (2016) [1], as cited in Ulmer et al. (2024) [3].}\par}
+  \vspace{0.1em}
+  {\scriptsize\textcolor{gray}{Illustration: an early embedding with a selected cluster, followed by local refinement.}\par}
+  \vspace{0.05em}
+  \includegraphics[width=0.68\textwidth]{assets/pezzotti-fig8-panels-only.png}
+  \vspace{-0.1em}
+  {\centering\tiny\textcolor{gray}{Figure excerpted from Pezzotti et al. (2017) [2].}\par}
 \end{frame}
 
 % Review slide 2 of 6
