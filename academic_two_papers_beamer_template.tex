@@ -118,29 +118,24 @@
 
 % Review slide 1 of 6
 \begin{frame}{Progressive Computation}
+  \footnotesize
+  \begin{tabularx}{0.96\textwidth}{@{}X X@{}}
+    \textbf{$F_p$}: progressive function & \textbf{$P$}: function parameters; $D_i$: data at pass $i$ \\
+    \textbf{$q$}: requested interval between outputs & \textbf{$t_i,m_i$}: time and memory at pass $i$ \\
+    \textbf{$R_{i-1},R_i,R$}: previous, partial, and final result & \textbf{$R_0=\emptyset$}: first call has no previous result
+  \end{tabularx}
+  \vspace{0.3em}
   \centering
   \small
   \[
-    \begin{aligned}
-      F_p(P,D_1,q,\emptyset)&\xrightarrow{t_1,m_1}R_1,\quad\ldots,\\
-      F_p(P,D_z,q,R_{z-1})&\xrightarrow{t_z,m_z}R_z
-    \end{aligned}
+    F_p(P,D_i,q,R_{i-1})\xrightarrow{t_i,m_i}R_i,\qquad i=1,\ldots,z
   \]
   \[
-    t_i\leq q,\qquad R_i\to R\;\text{or the computation reaches a termination criterion.}
+    t_i\leq q,\qquad R_i\to R\;\text{or a termination criterion is reached.}
   \]
   \vspace{-0.35em}
-  \footnotesize
-  \begin{tabularx}{0.96\textwidth}{@{}X X@{}}
-    \textbf{$F_p$}: progressive function & \textbf{$q$}: requested interval between results \\
-    \textbf{$P$}: function parameters & \textbf{$D_i$}: data processed at pass $i$ \\
-    \textbf{$R_{i-1}$}: previous result; \textbf{$R_i$}: partial result & \textbf{$t_i,m_i$}: time and memory at pass $i$ \\
-    \textbf{$\emptyset$}: no previous result at the first pass & \textbf{$R$}: final result
-  \end{tabularx}
-  \vspace{0.1em}
-  \vspace{0.05em}
-  \includegraphics[width=0.62\textwidth]{assets/pezzotti-fig8-panels-only.png}\\[-0.1em]
-  {\centering\tiny\textcolor{gray}{Equations: Fekete \& Primet (2016) [1], as cited by Ulmer et al. (2024) [3].\\[-0.1em]
+  \includegraphics[width=0.64\textwidth]{assets/pezzotti-fig8-panels-only.png}\\[0.1em]
+  {\centering\scriptsize\textcolor{gray}{Equations: Fekete \& Primet (2016) [1], as cited by Ulmer et al. (2024) [3].\\[-0.1em]
   Figure: Pezzotti et al. (2017) [2].}\par}
 \end{frame}
 
