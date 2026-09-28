@@ -114,7 +114,7 @@
   {\scriptsize\textcolor{gray}{Definition adapted from Ulmer et al., ``A Survey on Progressive Visualization'' (2024).}}
 \end{frame}
 
-\section{Literature Review}
+\section{Conceptual Framing}
 
 % Review slide 1 of 6
 \begin{frame}{Progressive Computation}
@@ -197,53 +197,45 @@
   {\scriptsize\textcolor{gray}{The custom-chunking formula is schematic. The survey gives no universal equation.}}
 \end{frame}
 
-% Review slide 3 of 6
-\begin{frame}{A Taxonomy of Progressive Visualizations}
-  \begin{itemize}
-    \item \textbf{Visualization type:} temporal, geo-spatial, hierarchical, network, multidimensional, or field.
-    \item \textbf{Processing:} data chunking, process chunking, or custom chunking.
-    \item \textbf{Data domain:} known end or unknown end.
-    \item \textbf{Visual update:} extend the current view or overwrite it with a new state.
-  \end{itemize}
+% Conceptual framing: the sequence of intermediate states is itself analyzable
+\begin{frame}{The Intermediate State $R_i$ as an Object of Analysis}
+  \centering
+  \vspace{0.15em}
+  {\large
+  $R_0\;\longrightarrow\;R_1\;\longrightarrow\;\cdots\;\longrightarrow\;R_i\;\longrightarrow\;\cdots\;\longrightarrow\;R_z$
+  \par}
+  \vspace{0.45em}
+  {\normalsize The sequence $\{R_i\}$ exposes how an analysis develops over time.\par}
+  \vspace{0.7em}
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{0.31\textwidth}
+      \centering
+      {\small\bfseries\color{ConferenceBlue}Pass-indexed\par}
+      \vspace{0.25em}
+      \small Each $R_i$ is a state at a particular pass $i$.
+    \end{column}
+    \begin{column}{0.31\textwidth}
+      \centering
+      {\small\bfseries\color{ConferenceBlue}Partial\par}
+      \vspace{0.25em}
+      \small $R_i$ is an intermediate output; it need not yet be the terminal state $R_z$.
+    \end{column}
+    \begin{column}{0.31\textwidth}
+      \centering
+      {\small\bfseries\color{ConferenceBlue}Evolving\par}
+      \vspace{0.25em}
+      \small Its relation to $R_{i-1}$ makes change across passes observable.
+    \end{column}
+  \end{columns}
   \vfill
-  {\scriptsize\textcolor{gray}{Source: Ulmer et al. (2024).}}
+  {\small\bfseries Candidate properties to examine:}
+  {\small quality/error, uncertainty, change, stability, and convergence\par}
+  {\scriptsize\textcolor{gray}{These properties require task-specific interpretation and measures. The analytical framing is this talk's; the progressive-visualization definition is from Ulmer et al. (2024).}}
 \end{frame}
 
-% Review slide 4 of 6
-\begin{frame}{Progressive Dimensionality Reduction}
-  \begin{itemize}
-    \item t-SNE builds an embedding through iterative optimization, but it must first compute high-dimensional similarities.
-    \item Barnes-Hut t-SNE reduces optimization cost, yet initialization can still delay the first interpretable embedding.
-    \item Q-SNE approximated neighbors for sparse document data; A-tSNE extends approximate similarities to dense high-dimensional data.
-  \end{itemize}
-  \vfill
-  {\scriptsize\textcolor{gray}{Source: Pezzotti et al. (2017), Related Work.}}
-\end{frame}
-
-% Review slide 5 of 6
-\begin{frame}{Field Trends and Open Challenges}
-  \begin{itemize}
-    \item The survey classifies 48 papers from 1999 to 2023; 33 of 48 use multidimensional visualization.
-    \item Steering appears in 35 studies, uncertainty in 20, and real-time processing in 10.
-    \item Open challenges include visual stability as estimates change, uncertainty communication, and evaluation beyond runtime.
-  \end{itemize}
-  \vfill
-  {\scriptsize\textcolor{gray}{Source: Ulmer et al. (2024), study set and discussion.}}
-\end{frame}
-
-% Review slide 6 of 6
-\begin{frame}{Synthesis and Paper Positioning}
-  \begin{itemize}
-    \item A-tSNE addresses an algorithm-level bottleneck: delayed initialization in high-dimensional t-SNE.
-    \item The 2024 survey offers a field-level taxonomy and reviews evaluation methods and research gaps.
-    \item \textbf{Synthesis:} progressive methods must make partial results timely, interpretable, steerable, and stable as they improve.
-  \end{itemize}
-  \vfill
-  {\scriptsize\textcolor{gray}{Sources: Pezzotti et al. (2017); Ulmer et al. (2024).}}
-\end{frame}
 \section{Paper 1}
 
-% Slides 9-18: Paper 1 (10 slides)
+% Slides 6-15: Paper 1 (10 slides)
 \begin{frame}{Paper 1: Overview}
   \begin{itemize}
     \item \fillin{Title, authors, and publication details}
@@ -326,7 +318,7 @@
 
 \section{Paper 2}
 
-% Slides 19-26: Paper 2 (8 slides)
+% Slides 16-23: Paper 2 (8 slides)
 \begin{frame}{Paper 2: Overview}
   \begin{itemize}
     \item \fillin{Title, authors, and publication details}
@@ -391,7 +383,7 @@
   \end{itemize}
 \end{frame}
 
-% Slide 27: References
+% Slide 24: References
 \section{References}
 \begin{frame}{References}
   \small
@@ -404,7 +396,7 @@
 \end{thebibliography}
 \end{frame}
 
-% Slide 28: Questions
+% Slide 25: Questions
 \begin{frame}
   \centering
   \vfill
