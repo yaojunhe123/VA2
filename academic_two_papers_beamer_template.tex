@@ -117,14 +117,31 @@
 \section{Literature Review}
 
 % Review slide 1 of 6
-\begin{frame}{Motivation and Scope}
-  \begin{itemize}
-    \item Larger datasets and longer-running analytics delay the first usable result and interrupt visual exploration.
-    \item Progressive visualization shows meaningful partial views while computation continues; the views improve over time.
-    \item Ulmer et al. focus on visual and interactive systems, excluding work that only accelerates algorithms without progressive visual output.
-  \end{itemize}
-  \vfill
-  {\scriptsize\textcolor{gray}{Source: Ulmer et al. (2024).}}
+\begin{frame}{Progressive Computation}
+  \centering
+  \small
+  \[
+    f(P)\mapsto r,\qquad F(P,D)\xrightarrow{t,m}R
+  \]
+  \vspace{-0.65em}
+  \[
+    F_p(P,D_1,q,\emptyset)\xrightarrow{t_1,m_1}R_1
+    \quad\cdots\quad
+    F_p(P,D_z,q,R_{z-1})\xrightarrow{t_z,m_z}R_z
+  \]
+  \vspace{-0.65em}
+  \[
+    t_i\leq q,\qquad \lim_{j\to\infty}R_j=R
+    \quad\text{or a termination criterion is reached.}
+  \]
+  \vspace{-0.4em}
+  {\scriptsize $q$: interval between partial results;\quad $t_i,m_i$: time and memory;\quad $R_i$: partial result.}
+  \vspace{0.2em}
+
+  \includegraphics[width=0.72\textwidth]{assets/pezzotti-fig8-panels-only.png}\\[-0.15em]
+  \vspace{-0.20cm}
+  {\tiny\textcolor{gray}{Formula: Fekete \& Primet (2016), ``Progressive Analytics: A Computation Paradigm for Exploratory Data Analysis,'' as cited in Ulmer et al. (2024).\\
+  Figure: Pezzotti et al. (2017), ``Approximated and User Steerable tSNE for Progressive Visual Analytics.''}}
 \end{frame}
 
 % Review slide 2 of 6
@@ -338,6 +355,8 @@
 \begin{frame}{References}
   \small
   \begin{thebibliography}{99}
+    \bibitem{fekete2016} J.-D. Fekete and R. Primet, ``Progressive Analytics: A Computation Paradigm for Exploratory Data Analysis,'' CoRR, abs/1607.05162, 2016.
+
     \bibitem{pezzotti2017} N. Pezzotti et al., Approximated and User Steerable t-SNE for Progressive Visual Analytics, \textit{IEEE Transactions on Visualization and Computer Graphics}, 23(7), 1739--1752, 2017. doi:10.1109/TVCG.2016.2570755.
 
     \bibitem{ulmer2024} A. Ulmer et al., A Survey on Progressive Visualization, \textit{IEEE Transactions on Visualization and Computer Graphics}, 30(9), 6447--6467, 2024. doi:10.1109/TVCG.2023.3346641.
