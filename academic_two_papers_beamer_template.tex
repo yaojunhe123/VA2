@@ -141,44 +141,51 @@
 
 % Review slide 2 of 6
 \begin{frame}{Three Ways to Produce Progressive Results}
-  \centering
-  \includegraphics[width=0.94\textwidth]{assets/ulmer-ppc-row.png}\\[-0.1em]
-  {\tiny\textcolor{gray}{Ulmer et al. (2024), ``A Survey on Progressive Visualization.''}}
+  \begin{center}
+    \includegraphics[width=0.90\textwidth]{assets/ulmer-ppc-row.png}\\[-0.1em]
+    {\tiny\textcolor{gray}{Ulmer et al. (2024), ``A Survey on Progressive Visualization.''}}
+  \end{center}
   \vspace{0.35em}
   \begin{columns}[T,onlytextwidth]
-    \begin{column}{0.32\textwidth}
+    \begin{column}{0.30\textwidth}
+      \raggedright
       {\small\bfseries\color{ConferenceBlue}Data chunking\par}
-      {\scriptsize\[
+      \vspace{0.2em}
+      {\centering\scriptsize\[
         \begin{gathered}
           D_i=\bigcup_{k=1}^{i}d_k\\[-0.15em]
           R_i=F_p(P,D_i,q,R_{i-1})
         \end{gathered}
       \]}
-      {\footnotesize $R_i$ covers the data received so far.}
+      {\footnotesize $R_i$ summarizes processed data and may be incomplete.}
     \end{column}
-    \begin{column}{0.32\textwidth}
+    \begin{column}{0.30\textwidth}
+      \raggedright
       {\small\bfseries\color{ConferenceBlue}Process chunking\par}
-      {\scriptsize\[
+      \vspace{0.2em}
+      {\centering\scriptsize\[
         \begin{gathered}
           D_i=D\\[-0.15em]
           R_i=F_p(P,D,q,R_{i-1})
         \end{gathered}
       \]}
-      {\footnotesize $R_i$ is the current algorithm output on the full data.}
+      {\footnotesize $R_i$ is the current solution over the full dataset.}
     \end{column}
-    \begin{column}{0.32\textwidth}
+    \begin{column}{0.30\textwidth}
+      \raggedright
       {\small\bfseries\color{ConferenceBlue}Custom chunking\par}
-      {\scriptsize\[
+      \vspace{0.2em}
+      {\centering\scriptsize\[
         \begin{gathered}
           D_i=\pi_i(P,D,R_{i-1})\\[-0.15em]
           R_i=F_p(P,D_i,q,R_{i-1})
         \end{gathered}
       \]}
-      {\footnotesize $\pi_i$ is a task-specific or hybrid scheduling rule.}
+      {\footnotesize $R_i$ follows the chosen hybrid or custom schedule.}
     \end{column}
   \end{columns}
   \vfill
-  {\scriptsize\textcolor{gray}{Custom-chunking formula is schematic. The survey gives no universal equation.}}
+  {\scriptsize\textcolor{gray}{The custom-chunking formula is schematic. The survey gives no universal equation.}}
 \end{frame}
 
 % Review slide 3 of 6
