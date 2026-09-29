@@ -225,11 +225,12 @@
       \raggedright
       {\large\bfseries\color{ConferenceBlue}Ulmer et al. (2024)\par}
       \vspace{0.55em}
-      {\small\itshape
-      ``each pass limits its execution time to a requested latency and renders a meaningful partial result;''\par}
-      \vspace{0.6em}
-      {\small\itshape
-      ``a progressive visualization allows interactions at any time; it adapts as much as possible, even implementing steering if necessary.''\par}
+      {\small
+      \textbf{Latency-bounded passes.} Each pass returns a meaningful partial result within a requested latency.\par
+      \vspace{0.65em}
+      \textbf{Quality feedback.} Partial results carry quality or error information and an estimate of completion.\par
+      \vspace{0.65em}
+      \textbf{Ongoing interaction.} Users can interact throughout the process; the visualization adapts and can support steering.\par}
       \vfill
       {\scriptsize\textcolor{gray}{``A Survey on Progressive Visualization'' [3].}\par}
     \end{column}
@@ -237,11 +238,12 @@
       \raggedright
       {\large\bfseries\color{ConferenceBlue}Pezzotti et al. (2017)\par}
       \vspace{0.55em}
-      {\small\itshape
-      ``Progressive Visual Analytics aims at improving the interactivity in existing analytics techniques by means of visualization as well as interaction with intermediate results.''\par}
-      \vspace{0.6em}
-      {\small\itshape
-      ``With this feedback, the user can decide on local refinements and steer the approximation level during the analysis.''\par}
+      {\small
+      \textbf{Early intermediate results.} Approximate initialization lets users begin interpreting the embedding before exact computation finishes.\par
+      \vspace{0.65em}
+      \textbf{User-steered refinement.} Visual feedback on approximation supports local refinement and control of the approximation level.\par
+      \vspace{0.65em}
+      \textbf{Updates without restarting.} Data can change during optimization while approximate neighborhoods are refined in the background.\par}
       \vfill
       {\scriptsize\textcolor{gray}{``Approximated and User Steerable tSNE for Progressive Visual Analytics'' [2].}\par}
     \end{column}
