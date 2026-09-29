@@ -120,7 +120,7 @@
 % Slide 3: distinguish early partial results from total completion time
 \begin{frame}{Earlier Results Do Not Guarantee Faster Completion}
   \centering
-  {\scriptsize\textcolor{gray}{Illustrative case (not to scale): the progressive run takes longer overall.}\par}
+  {\scriptsize\textcolor{gray}{Schematic possibility (not to scale): incremental-update overhead can make PVA finish later [4].}\par}
   \vspace{0.25em}
   \begin{tikzpicture}[x=\textwidth,y=1cm]
     \node[anchor=east] at (.205,1.75) {\small Non-progressive};
@@ -141,10 +141,10 @@
   \vspace{0.55em}
   \begin{minipage}{0.96\textwidth}
     \centering
-    {\small Partial results $R_1,R_2,\ldots$ become available before the progressive run finishes.\par}
+    {\small Partial results $R_1,R_2,\ldots$ are available for analysis before the progressive run finishes.\par}
     \vspace{0.3em}
-    {\small\bfseries No fixed ordering of total runtime: $T_P$ may be shorter, equal to, or longer than $T_E$.\par}
-    {\small The benefit is earlier access to partial results, not guaranteed faster completion.\par}
+    {\small\bfseries Total runtime depends on the implementation.\par}
+    {\small Update overhead can extend completion [4]; A-tSNE reports computational gains [2].\par}
   \end{minipage}
 \end{frame}
 
@@ -440,6 +440,8 @@
     \bibitem{pezzotti2017} N. Pezzotti et al., Approximated and User Steerable t-SNE for Progressive Visual Analytics, \textit{IEEE Transactions on Visualization and Computer Graphics}, 23(7), 1739--1752, 2017. doi:10.1109/TVCG.2016.2570755.
 
     \bibitem{ulmer2024} A. Ulmer et al., A Survey on Progressive Visualization, \textit{IEEE Transactions on Visualization and Computer Graphics}, 30(9), 6447--6467, 2024. doi:10.1109/TVCG.2023.3346641.
+
+    \bibitem{angelini2018} M. Angelini, G. Santucci, H. Schumann, and H.-J. Schulz, ``A Review and Characterization of Progressive Visual Analytics,'' \textit{Informatics}, 5(3), 31, 2018. doi:10.3390/informatics5030031.
 \end{thebibliography}
 \end{frame}
 
