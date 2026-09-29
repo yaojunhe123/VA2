@@ -197,40 +197,25 @@
   {\scriptsize\textcolor{gray}{The custom-chunking formula is schematic. The survey gives no universal equation.}}
 \end{frame}
 
-% Conceptual framing: the sequence of intermediate states is itself analyzable
-\begin{frame}{The Intermediate State $R_i$ as an Object of Analysis}
+% Conceptual framing: intermediate states inform the user's next move
+\begin{frame}{From Intermediate State to the Next User Action}
   \centering
-  \vspace{0.15em}
+  \vspace{0.5em}
   {\large
-  $R_0\;\longrightarrow\;R_1\;\longrightarrow\;\cdots\;\longrightarrow\;R_i\;\longrightarrow\;\cdots\;\longrightarrow\;R_z$
-  \par}
-  \vspace{0.45em}
-  {\normalsize The sequence $\{R_i\}$ exposes how an analysis develops over time.\par}
-  \vspace{0.7em}
-  \begin{columns}[T,onlytextwidth]
-    \begin{column}{0.31\textwidth}
-      \centering
-      {\small\bfseries\color{ConferenceBlue}Pass-indexed\par}
-      \vspace{0.25em}
-      \small Each $R_i$ is a state at a particular pass $i$.
-    \end{column}
-    \begin{column}{0.31\textwidth}
-      \centering
-      {\small\bfseries\color{ConferenceBlue}Partial\par}
-      \vspace{0.25em}
-      \small $R_i$ is an intermediate output; it need not yet be the terminal state $R_z$.
-    \end{column}
-    \begin{column}{0.31\textwidth}
-      \centering
-      {\small\bfseries\color{ConferenceBlue}Evolving\par}
-      \vspace{0.25em}
-      \small Its relation to $R_{i-1}$ makes change across passes observable.
-    \end{column}
-  \end{columns}
+  $R_i\;\xrightarrow{\text{inspect and interpret}}\;
+  \left\{\begin{array}{c}
+    \text{what information to seek next}\\[0.25em]
+    \text{interaction or steering choice}
+  \end{array}\right.\;
+  \xrightarrow{\text{feed back into computation}}\;R_{i+1}$\par}
+  \vspace{0.8em}
+  {\normalsize Analyzing $R_i$ informs both what the user seeks next and how the process is steered.\par}
+  \vspace{0.8em}
+  {\small\bfseries\color{ConferenceBlue}Potential decision signals in the intermediate states\par}
+  \vspace{0.25em}
+  {\small Quality / error\qquad Uncertainty\qquad Change\qquad Stability / convergence\par}
   \vfill
-  {\small\bfseries Candidate properties to examine:}
-  {\small quality/error, uncertainty, change, stability, and convergence\par}
-  {\scriptsize\textcolor{gray}{These properties require task-specific interpretation and measures. The analytical framing is this talk's; the progressive-visualization definition is from Ulmer et al. (2024).}}
+  {\scriptsize\textcolor{gray}{This talk's analytical framing, motivated by the PVA characteristics described by Ulmer et al. [3] and Pezzotti et al. [2]. Task-specific measures are required.}}
 \end{frame}
 
 % Slide 6: source quotations on progressive visual analytics
