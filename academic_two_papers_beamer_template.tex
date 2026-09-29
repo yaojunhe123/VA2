@@ -45,6 +45,7 @@
 \usepackage{tabularx}
 \usepackage{array}
 \usepackage{amsmath}
+\usepackage{tikz}
 
 % Replace each gray placeholder with the corresponding paper content
 \newcommand{\fillin}[1]{\textcolor{gray}{\textit{[#1]}}}
@@ -115,6 +116,37 @@
 \end{frame}
 
 \section{Conceptual Framing}
+
+% Slide 3: distinguish early partial results from total completion time
+\begin{frame}{Earlier Results Do Not Guarantee Faster Completion}
+  \centering
+  {\scriptsize\textcolor{gray}{Illustrative case (not to scale): the progressive run takes longer overall.}\par}
+  \vspace{0.25em}
+  \begin{tikzpicture}[x=\textwidth,y=1cm]
+    \node[anchor=east] at (.205,1.75) {\small Non-progressive};
+    \draw[->,thick] (.23,1.75) -- (.68,1.75);
+    \node[above=3pt] at (.45,1.75) {\small computation};
+    \fill[ConferenceBlue] (.68,1.75) circle (2.2pt);
+    \node[below=4pt,align=center] at (.68,1.75) {\small final $R$\\$T_E$};
+
+    \node[anchor=east] at (.205,.25) {\small Progressive};
+    \draw[->,thick] (.23,.25) -- (.92,.25);
+    \foreach \x/\label in {.34/$R_1$,.46/$R_2$,.58/$R_i$} {
+      \fill[ConferenceBlue] (\x,.25) circle (2.2pt);
+      \node[above=4pt] at (\x,.25) {\small \label};
+    }
+    \fill[ConferenceBlue] (.90,.25) circle (2.2pt);
+    \node[below=4pt,align=center] at (.90,.25) {\small final $R_z$\\$T_P$};
+  \end{tikzpicture}
+  \vspace{0.55em}
+  \begin{minipage}{0.96\textwidth}
+    \centering
+    {\small Partial results $R_1,R_2,\ldots$ become available before the progressive run finishes.\par}
+    \vspace{0.3em}
+    {\small\bfseries No fixed ordering of total runtime: $T_P$ may be shorter, equal to, or longer than $T_E$.\par}
+    {\small The benefit is earlier access to partial results, not guaranteed faster completion.\par}
+  \end{minipage}
+\end{frame}
 
 % Review slide 1 of 6
 \begin{frame}{Progressive Computation}
@@ -216,7 +248,7 @@
   \vfill
 \end{frame}
 
-% Slide 6: source quotations on progressive visual analytics
+% Slide 7: source-based characteristics of progressive visual analytics
 \begin{frame}{Progressive Visual Analytics: Two Perspectives}
   \begin{columns}[T,onlytextwidth]
     \begin{column}{0.47\textwidth}
@@ -250,7 +282,7 @@
 
 \section{Paper 1}
 
-% Slides 7-16: Paper 1 (10 slides)
+% Slides 8-17: Paper 1 (10 slides)
 \begin{frame}{Paper 1: Overview}
   \begin{itemize}
     \item \fillin{Title, authors, and publication details}
@@ -333,7 +365,7 @@
 
 \section{Paper 2}
 
-% Slides 17-24: Paper 2 (8 slides)
+% Slides 18-25: Paper 2 (8 slides)
 \begin{frame}{Paper 2: Overview}
   \begin{itemize}
     \item \fillin{Title, authors, and publication details}
@@ -398,7 +430,7 @@
   \end{itemize}
 \end{frame}
 
-% Slide 25: References
+% Slide 26: References
 \section{References}
 \begin{frame}{References}
   \small
@@ -411,7 +443,7 @@
 \end{thebibliography}
 \end{frame}
 
-% Slide 26: Questions
+% Slide 27: Questions
 \begin{frame}
   \centering
   \vfill
